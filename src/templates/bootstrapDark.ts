@@ -96,7 +96,7 @@ class TemplateDarkBootstrap extends TemplateBase {
       .replaceAll('{H1}', h1)
 
     if (keyValues) {
-      for (const key in keyValues) {
+      for (const key in Object.keys(keyValues)) {
         html = html.replaceAll(`<!--${key.toUpperCase()}-->`, keyValues[key])
       }
     }
@@ -129,7 +129,7 @@ class TemplateDarkBootstrap extends TemplateBase {
         i < rowPerCount * 2
           ? 'img-overlay'
           : _.shuffle([
-              //'micro',
+              // 'micro',
               'card',
               // 'card-featured',
               'card-vertical',

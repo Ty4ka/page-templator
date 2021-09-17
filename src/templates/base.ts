@@ -1,4 +1,4 @@
-import { ITemplateBase, TArticleItem, TTemplateSettings } from '../consts/types'
+import { ITemplateBase, TTemplateSettings } from '../consts/types'
 
 class TemplateBase implements ITemplateBase {
   protected _settings: TTemplateSettings

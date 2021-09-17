@@ -96,9 +96,9 @@ class TemplateDarkBootstrap extends TemplateBase {
       .replaceAll('{H1}', h1)
 
     if (keyValues) {
-      for (const key in Object.keys(keyValues)) {
+      Object.keys(keyValues).forEach((key) => {
         html = html.replaceAll(`<!--${key.toUpperCase()}-->`, keyValues[key])
-      }
+      })
     }
 
     return html
